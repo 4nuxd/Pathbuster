@@ -32,8 +32,8 @@ This project is a **path traversal testing toolkit** designed for web applicatio
 - ✅ **Custom payload support** via `--cp new_techniques.txt`  
   Payloads are defined in Python tuple format, e.g.:
   ```python
-  ("NT01", "Custom traversal test", lambda: "../../../etc/passwd"),
-  ("NT02", "Double encoded trick", lambda: "%252e%252e%252fetc/passwd"),
+  ("NT01", "Custom traversal test", "../../../etc/passwd"),
+  ("NT02", "Double encoded trick", "%252e%252e%252fetc/passwd"),
 
 
 * ✅ **Target parameter auto-detection**
