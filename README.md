@@ -1,14 +1,12 @@
+# Dynamic Path Traversal Tester
 
-````markdown
-# Pathbuster 
-
-A **path traversal testing toolkit** designed for web application security assessments. It provides a systematic way to test endpoints for **directory traversal / path traversal vulnerabilities** using both built-in payloads and custom-generated ones.
+This project is a **path traversal testing toolkit** designed for web application security assessments. It provides a systematic way to test endpoints for **directory traversal / path traversal vulnerabilities** using both built-in payloads and custom-generated ones.
 
 ---
 
 ## 📂 Project Structure
 
-- **`main.py`**  
+- **`enhanced_script.py`**  
   The main testing script. Sends crafted GET requests with payloads injected into URL parameters and checks for signs of sensitive file disclosure (like `/etc/passwd`).
 
 - **`payload_generation.py`**  
@@ -18,7 +16,7 @@ A **path traversal testing toolkit** designed for web application security asses
   Contains target filenames and paths you want to attempt reading (e.g., `/etc/passwd`, `.git/config`, `robots.txt`). You can extend this list to suit your assessment.
 
 - **`new_techniques.txt`**  
-  The generated payloads file that `main.py` can load when the `--cp` flag is used. This file is produced by `payload_generation.py`.
+  The generated payloads file that `enhanced_script.py` can load when the `--cp` flag is used. This file is produced by `payload_generation.py`.
 
 ---
 
@@ -36,7 +34,7 @@ A **path traversal testing toolkit** designed for web application security asses
   ```python
   ("NT01", "Custom traversal test", lambda: "../../../etc/passwd"),
   ("NT02", "Double encoded trick", lambda: "%252e%252e%252fetc/passwd"),
-````
+
 
 * ✅ **Target parameter auto-detection**
   If you don’t specify `-p`, the script will parse query parameters from the URL. Defaults to `filename`.
