@@ -6,7 +6,7 @@ This project is a **path traversal testing toolkit** designed for web applicatio
 
 ## 📂 Project Structure
 
-- **`enhanced_script.py`**  
+- **`main.py`**  
   The main testing script. Sends crafted GET requests with payloads injected into URL parameters and checks for signs of sensitive file disclosure (like `/etc/passwd`).
 
 - **`payload_generation.py`**  
@@ -16,7 +16,7 @@ This project is a **path traversal testing toolkit** designed for web applicatio
   Contains target filenames and paths you want to attempt reading (e.g., `/etc/passwd`, `.git/config`, `robots.txt`). You can extend this list to suit your assessment.
 
 - **`new_techniques.txt`**  
-  The generated payloads file that `enhanced_script.py` can load when the `--cp` flag is used. This file is produced by `payload_generation.py`.
+  The generated payloads file that `main.py` can load when the `--cp` flag is used. This file is produced by `payload_generation.py`.
 
 ---
 
