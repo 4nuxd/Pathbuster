@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Dynamic Path Traversal Tester (GET)
+Pathbuster (GET)
+Author: https://github.com/4nuxd/
 -----------------------------------
 
 A tool to test web applications for path traversal vulnerabilities by dynamically
