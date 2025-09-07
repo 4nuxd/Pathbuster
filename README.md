@@ -119,24 +119,9 @@ python main.py --list urls.txt
    * If `/etc/passwd`-like content is found, the script marks it as a **possible leak**.
    * Use `--full` to dump the entire response body.
 
----
-
-## 📝 Changes Made in This Version
-
-* Added `--cp` flag to load payloads from `new_techniques.txt` (Python tuple format).
-* Implemented `ast.literal_eval` parsing for safer custom payload loading.
-* Added `--full` flag to display complete response bodies when leaks are detected.
-* Improved error handling for invalid custom payloads.
-* Informational message when custom payloads are successfully loaded.
-* Cleaned and documented code for easier extension.
-
----
-
 ## ⚠️ Disclaimer
 
 This tool is for **educational and authorized penetration testing purposes only**.
 Do **not** use it against systems without explicit permission. Unauthorized use may violate the law.
 
 ---
-
-```
